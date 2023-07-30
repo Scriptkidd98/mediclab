@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
 .nav-links {
     font-size: smaller;
     color: white !important;
@@ -35,23 +37,23 @@
     font-weight: 600;
 }
 .we-provide {
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-size: 20px;
     font-weight: 400;
 }
 .highest-standard {
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-size: 22px;
     font-weight: 400;
 }
 .know-more {
     background: #0052FF;
-    font-family: Mulish;
+    font-family: 'Mulish';
     font-size: 16px;
     font-weight: 400;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 25px;
 }
 .we-provide, .full-medical-care {
     margin-bottom: 0px !important;
@@ -78,4 +80,81 @@
 .services-icon-image {
     height: 80px;
     width: 80px;
+    margin: 0 auto !important;
+}
+.service-name-span {
+    font-family: 'Mulish';
+    font-size: 18px;
+    font-weight: 600;
+    color: #0052FF;
+}
+.service-div p {
+    text-align: center;
+}
+.service-info-text {
+    font-family: 'Mulish';
+    font-size: 16px;
+    font-weight: 400;
+}
+.service-div {
+    display: grid;
+    margin-top: 50px;
+}
+.our-departments-div, .faq-div {
+    background: #F9F9F9;
+}
+.services-div, .our-departments-div, .faq-div {
+    padding: 35px 30px;
+}
+.our-departments-heading, .our-services-heading, .faq-heading {
+    font-family: Mulish;
+    font-size: 22px;
+    font-weight: 600;
+    color: #202020;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.our-departments-info-text {
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5B5B5B;
+}
+.psychiatry-div {
+    background: #0052FF;
+}
+.departments-images {
+    width: 80px;
+    height: 80px;
+}
+.psychiatry-div p {
+    color: white;
+}
+.other-departments-div, .psychiatry-div {
+    border-radius: 10px;
+    padding: 40px 0px;
+    display: grid;
+    justify-content: center;
+    margin-top: 30px;
+}
+.other-departments-div {
+    background-color: white;
+}
+.other-departments-div p {
+    color: #0052FF;
+}
+.medic-span, .lab-span {
+    font-family: Mulish;
+    font-size: 20px;
+}
+.medic-span {
+    font-weight: 700;
+    color: #0052FF;
+}
+.lab-span {
+    font-weight: 400;
+    color: white;
 }
