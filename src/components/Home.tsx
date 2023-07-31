@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import doctorsbag from './Images/doctors-bag.svg';
 import labitems from './Images/lab-items.svg';
@@ -14,9 +14,16 @@ import baby from './Images/Child-With-Pacifier.svg';
 import nurse from './Images/nurse.svg';
 import food from './Images/vegan-food.svg';
 import coronavirus from './Images/Coronavirus.svg';
+import checkmark from './Images/checkmark.svg';
+import checkmarkwhite from './Images/checkmark-white.svg';
+import nursewoman from './Images/nurse-woman.svg';
+import openeddropdown from './Images/opened-dropdown.svg';
+import closeddropdown from './Images/closed-dropdown.svg';
+
 
 
 const Home: React.FC = () => {
+    const[isMakeAppointmentShown, setIsMakeAppointmentShown] = useState<boolean>(false);
   return (
     <div>
         <div className='jumbotron'>
@@ -163,6 +170,58 @@ const Home: React.FC = () => {
                             <img src={nurse} alt='Nurse' className='services-images'></img>
                             <p className='services-heading'>Prima Care Physicia</p>
                             <p className='services-text'>Lmedic Center provides the following health care services</p>
+                            <div className='services-list-div'>
+                                <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Complete Family Health Care</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>EKG</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>X-Ray</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Ultrasound</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Acute and Chronic Care</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Well Woman's Exam</p>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </div>
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={4} lg={4}>
@@ -170,6 +229,58 @@ const Home: React.FC = () => {
                             <img src={food} alt='Vegan Food' className='services-images'></img>
                             <p className='services-heading'>Holistic Wellness</p>
                             <p className='services-text'>Lmedic Center provides the following health care services</p>
+                            <div className='services-list-div'>
+                                <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Weight Loss</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Therapeutic medical massage</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Holistic skin care</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>K-laser pain management</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Detoxification</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmark} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-text'>Hormone replacement therapy</p>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </div>
                         </div>
                     </Col>
                     <Col xs={12} sm={12} md={4} lg={4}>
@@ -177,6 +288,58 @@ const Home: React.FC = () => {
                             <img src={coronavirus} alt='Coronavirus' className='services-images'></img>
                             <p className='services-heading'>Allergy and Immunology</p>
                             <p className='services-text'>Lmedic Center provides the following health care services</p>
+                            <div className='services-list-div'>
+                                <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmarkwhite} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-active-text'>Allergy and immunology</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmarkwhite} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-active-text'>Testing for Immunology</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmarkwhite} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-active-text'>Allergy treatments</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmarkwhite} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-active-text'>Asthma care</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmarkwhite} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-active-text'>Dematology</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col xs={2} sm={2} md={2} lg={2} style={{paddingRight: '0px'}}>
+                                            <img src={checkmarkwhite} alt='Checkmark' className='checkmark'></img>
+                                        </Col>
+                                        <Col xs={10} sm={10} md={10} lg={10} style={{paddingLeft: '0px'}}>
+                                            <p className='services-list-active-text'>Pediatric allergy</p>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </div>
                         </div>
                     </Col>
                 </Row>
@@ -185,6 +348,62 @@ const Home: React.FC = () => {
 
         <div className='faq-div'>
             <p className='faq-heading'>Frequently asked Questions</p>
+            <Container fluid style={{marginTop: '30px'}}>
+                <Row>
+                    <Col xs={12} sm={12} md={6} lg={6}>
+                        <div style={{width: '100%'}} className='faq-each-div'>
+                            <button className='dropdown-button' onClick={() => setIsMakeAppointmentShown(!isMakeAppointmentShown)}>
+                                <span className='dropdown-heading-text'>How do I make an appointment</span>
+                                {isMakeAppointmentShown ? 
+                                    <img src={openeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img> :
+                                    <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
+                                }
+                            </button>
+                            {isMakeAppointmentShown ? 
+                                <div className='faq-each-text-div'>
+                                    <p>If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner</p>
+                                </div> : 
+                                null
+                            }
+                        </div>
+
+                        <div style={{width: '100%'}} className='faq-each-div'>
+                            <button className='dropdown-button' onClick={() => setIsMakeAppointmentShown(!isMakeAppointmentShown)}>
+                                <span className='dropdown-heading-text'>How do I make an appointment</span>
+                                {isMakeAppointmentShown ? 
+                                    <img src={openeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img> :
+                                    <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
+                                }
+                            </button>
+                            {isMakeAppointmentShown ? 
+                                <div className='faq-each-text-div'>
+                                    <p>If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner</p>
+                                </div> : 
+                                null
+                            }
+                        </div>
+
+                        <div style={{width: '100%'}} className='faq-each-div'>
+                            <button className='dropdown-button' onClick={() => setIsMakeAppointmentShown(!isMakeAppointmentShown)}>
+                                <span className='dropdown-heading-text'>How do I make an appointment</span>
+                                {isMakeAppointmentShown ? 
+                                    <img src={openeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img> :
+                                    <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
+                                }
+                            </button>
+                            {isMakeAppointmentShown ? 
+                                <div className='faq-each-text-div'>
+                                    <p>If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner</p>
+                                </div> : 
+                                null
+                            }
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={12} md={6} lg={6}>
+                        <img src={nursewoman} alt='Nurse Woman' className='faq-nursewoman'></img>
+                    </Col>
+                </Row>
+            </Container>
         </div>
 
     </div>
