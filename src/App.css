@@ -37,18 +37,18 @@
     font-weight: 600;
 }
 .we-provide {
-    font-family: 'Mulish';
+    font-family: 'Mulish', sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
 .highest-standard {
-    font-family: 'Mulish';
+    font-family: 'Mulish', sans-serif;
     font-size: 22px;
     font-weight: 400;
 }
 .know-more {
     background: #0052FF;
-    font-family: 'Mulish';
+    font-family: 'Mulish', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: white;
@@ -78,21 +78,22 @@
     top: 0;
 }
 .services-icon-image {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin: 0 auto !important;
 }
 .service-name-span {
-    font-family: 'Mulish';
+    font-family: 'Mulish', sans-serif;
     font-size: 18px;
     font-weight: 600;
     color: #0052FF;
+    margin-top: 5px;
 }
 .service-div p {
     text-align: center;
 }
 .service-info-text {
-    font-family: 'Mulish';
+    font-family: 'Mulish', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
@@ -107,7 +108,7 @@
     padding: 35px 30px;
 }
 .our-departments-heading, .our-services-heading, .faq-heading {
-    font-family: Mulish;
+    font-family: 'Mulish', sans-serif;
     font-size: 22px;
     font-weight: 600;
     color: #202020;
@@ -115,7 +116,7 @@
     margin-bottom: 5px;
 }
 .our-departments-info-text {
-    font-family: Mulish;
+    font-family: 'Mulish', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
@@ -127,27 +128,34 @@
     background: #0052FF;
 }
 .departments-images {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
 }
 .psychiatry-div p {
     color: white;
+    margin-top: 10px;
+    text-align: center;
 }
 .other-departments-div, .psychiatry-div {
     border-radius: 10px;
     padding: 40px 0px;
-    display: grid;
-    justify-content: center;
     margin-top: 30px;
+}
+.departments-inner-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .other-departments-div {
     background-color: white;
 }
 .other-departments-div p {
     color: #0052FF;
+    margin-top: 10px;
+    text-align: center;
 }
 .medic-span, .lab-span {
-    font-family: Mulish;
+    font-family: 'Mulish', sans-serif;
     font-size: 20px;
 }
 .medic-span {
@@ -157,4 +165,53 @@
 .lab-span {
     font-weight: 400;
     color: white;
+}
+.services-images {
+    width: 50px;
+    height: 50px;
+}
+.coronavirus-div {
+    border-radius: 10px;
+    background: #0052FF;
+}
+.other-service-div {
+    border: 1px solid #0052FF;
+    border-radius: 10px;
+}
+.services-heading {
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.other-service-div .services-heading {
+    color: #0052FF;
+}
+.coronavirus-div .services-heading {
+    color: white;
+}
+.services-text {
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.other-service-div .services-text {
+    color: #3A3A3A;
+
+}
+.coronavirus-div .services-text {
+    color: white;
+}
+.services-div {
+    margin-top: 40px;
+}
+@media(max-width: 767px) {
+    .services-div {
+        padding: 35px 20px;
+    }
+}
+@media(min-width: 768px) and (max-width: 884px) {
+    .services-div {
+        padding: 35px 15px;
+    }
 }
