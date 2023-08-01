@@ -19,18 +19,32 @@ import checkmarkwhite from './Images/checkmark-white.svg';
 import nursewoman from './Images/nurse-woman.svg';
 import openeddropdown from './Images/opened-dropdown.svg';
 import closeddropdown from './Images/closed-dropdown.svg';
+import doctorman from './Images/doctor-man.svg';
+import map from './Images/map.svg';
+import locationmarker from './Images/location-marker.svg';
+import phone from './Images/phone.svg';
+import clock from './Images/Clock-Checked.svg';
+import testimonialguy from './Images/testimonial-guy.svg';
+import fivestars from './Images/five-stars.svg';
+import austin from './Images/austin.svg';
+import linkedin from './Images/linkedin.svg';
+import instagram from './Images/nstagram.svg';
+import facebook from './Images/facebook.svg';
+import youtube from './Images/youtube.svg';
+import slider from './Images/slider.svg';
 
 
 
 const Home: React.FC = () => {
-    const[isMakeAppointmentShown, setIsMakeAppointmentShown] = useState<boolean>(false);
+    const[isMakeAppointmentShown, setIsMakeAppointmentShown] = useState<boolean>(true);
+
   return (
     <div>
         <div className='jumbotron'>
             <div className='grey-film'>
-                <Navbar expand='md' className='navbar'>
+                <Navbar expand='lg' className='navbar'>
                     <Container fluid>
-                        <Navbar.Brand style={{paddingLeft: '50px'}}>
+                        <Navbar.Brand className='navbar-brand'>
                             <span>
                                 <span className='medic-span'>Medic</span><span className='lab-span'>lab</span>
                             </span>
@@ -353,7 +367,7 @@ const Home: React.FC = () => {
                     <Col xs={12} sm={12} md={6} lg={6}>
                         <div style={{width: '100%'}} className='faq-each-div'>
                             <button className='dropdown-button' onClick={() => setIsMakeAppointmentShown(!isMakeAppointmentShown)}>
-                                <span className='dropdown-heading-text'>How do I make an appointment</span>
+                                <span className='dropdown-heading-text'>How do I make an appointment?</span>
                                 {isMakeAppointmentShown ? 
                                     <img src={openeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img> :
                                     <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
@@ -368,39 +382,256 @@ const Home: React.FC = () => {
                         </div>
 
                         <div style={{width: '100%'}} className='faq-each-div'>
-                            <button className='dropdown-button' onClick={() => setIsMakeAppointmentShown(!isMakeAppointmentShown)}>
-                                <span className='dropdown-heading-text'>How do I make an appointment</span>
-                                {isMakeAppointmentShown ? 
-                                    <img src={openeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img> :
-                                    <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
-                                }
+                            <button className='dropdown-button'>
+                                <span className='dropdown-heading-text'>How do I get a copy of my record?</span>
+                                <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
                             </button>
-                            {isMakeAppointmentShown ? 
-                                <div className='faq-each-text-div'>
-                                    <p>If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner</p>
-                                </div> : 
-                                null
-                            }
                         </div>
 
                         <div style={{width: '100%'}} className='faq-each-div'>
-                            <button className='dropdown-button' onClick={() => setIsMakeAppointmentShown(!isMakeAppointmentShown)}>
-                                <span className='dropdown-heading-text'>How do I make an appointment</span>
-                                {isMakeAppointmentShown ? 
-                                    <img src={openeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img> :
-                                    <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
-                                }
+                            <button className='dropdown-button'>
+                                <span className='dropdown-heading-text'>Is there a charge for extra copies?</span>
+                                <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
                             </button>
-                            {isMakeAppointmentShown ? 
-                                <div className='faq-each-text-div'>
-                                    <p>If you would like to make an appointent with any one of our practitioners, please contact our reception staff. Alternatively you can book an appointment online. Every effort will be made to accomodate your preffered time and choice of practitioner</p>
-                                </div> : 
-                                null
-                            }
                         </div>
+
+                        <div style={{width: '100%'}} className='faq-each-div'>
+                            <button className='dropdown-button'>
+                                <span className='dropdown-heading-text'>How do I know the right practitioner?</span>
+                                <img src={closeddropdown} alt='Dropdown Icon' className='dropdown-icon-image'></img>
+                            </button>
+                        </div>
+
+                        <button className='ask-questions'>Ask Questions</button>
                     </Col>
                     <Col xs={12} sm={12} md={6} lg={6}>
                         <img src={nursewoman} alt='Nurse Woman' className='faq-nursewoman'></img>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+
+        <div className='specialists-div'>
+            <p className='our-specialists-heading'>Our Specialists</p>
+            <Container fluid>
+                <Row>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <div className='cardiotherapist-div each-specialist-div'>
+                            <div className='each-specialist-image-div'>
+                                <img src={doctorman} alt='Doctor Man' className='doctor-man'></img>
+                            </div>
+                            <div className='each-specialist-info-div'>
+                                <p className='doctor-name'>Dr. William Geralg</p>
+                                <p className='doctor-specialty'>Cardiotherapist</p>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Mon - Thur</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Friday</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Saturday</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <div className='cardiotherapist-div each-specialist-div'>
+                            <div className='each-specialist-image-div'>
+                                <img src={doctorman} alt='Doctor Man' className='doctor-man'></img>
+                            </div>
+                            <div className='each-specialist-info-div'>
+                                <p className='doctor-name'>Dr. William Geralg</p>
+                                <p className='doctor-specialty'>Cardiotherapist</p>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Mon - Thur</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Friday</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Saturday</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <div className='cardiotherapist-div each-specialist-div'>
+                            <div className='each-specialist-image-div'>
+                                <img src={doctorman} alt='Doctor Man' className='doctor-man'></img>
+                            </div>
+                            <div className='each-specialist-info-div'>
+                                <p className='doctor-name'>Dr. William Geralg</p>
+                                <p className='doctor-specialty'>Cardiotherapist</p>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Mon - Thur</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Friday</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={6} sm={6} md={6} lg={6} className=''>
+                                        <p className='available-date'>Saturday</p>
+                                    </Col>
+                                    <Col xs={6} sm={6} md={6} lg={6} className='schedule-col'>
+                                        <p className='available-time'>08:00 - 20:00</p>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+
+        <div className='testimonial-div'>
+            <div className='blueish-film'>
+                <h1 className='testimonial-heading'>Testimonials</h1>
+                <div className='testimonial-text-div'>
+                    <div className='testimonial-person-div'>
+                        <img src={testimonialguy} alt='Person' className='testimonial-person'></img>
+                    </div>
+                    <p className='testimonial-text'>“Joby made searching for a job easier and reduced the time framewhile eliminating the office to office conventional mode of application”</p>
+                    <Container fluid style={{marginTop: '20px'}}>
+                        <Row>
+                            <Col xs={6} sm={6} md={6} lg={6} style={{paddingRight: '3px'}}>
+                                <img src={fivestars} alt='Five Stars' style={{width: '160px', height: '26px', float: 'right'}}></img>
+                            </Col>
+                            <Col xs={6} sm={6} md={6} lg={6} style={{paddingLeft: '3px'}}>
+                                <p className='testimonial-writer-name'>
+                                    <span style={{color: 'white'}}>-Orlando Philip</span>
+                                    <span style={{color: '#0052FF'}}>(UI Designer)</span>
+                                </p>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <div className='slider-div'>
+                        <img src={slider} alt='Slider' style={{width: '80px', height: '25px'}}></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className='looking-for-div'>
+            <Container fluid>
+                <Row>
+                    <Col xs={12} sm={12} md={6} lg={6}>
+                        <img src={austin} alt='Person' className='austin'></img>
+                    </Col>
+                    <Col xs={12} sm={12} md={6} lg={6} style={{paddingBottom: '50px'}}>
+                        <p className='looking-for-heading'>Looking For a Professional</p>
+                        <div>
+                            <input placeholder='John Doe' className='looking-input'></input>
+
+                            <input placeholder='johndoe@gmail.com' className='looking-input email-input'></input>
+
+                            <input placeholder='Type message here' className='looking-input message-input'></input>
+
+                            <button className='book-appointment'>Book Appointment</button>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+
+        <div>
+            <img src={map} alt='Map' className='map'></img>
+        </div>
+
+        <div className='contact-div'>
+            <p className='contact-us-heading'>Contact Us</p>
+            <p className='do-not-hesitate'>Do not hesitate to contact us</p>
+            <Container fluid>
+                <Row>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <div className='contact-image-div'>
+                            <img src={locationmarker} alt='Location Marker' className='contact-image'></img>
+                        </div>
+                        <p className='contact-info-heading-text'>Our Address</p> 
+                        <p className='contact-info-text'>27 Fulton Street Brooklyn, New York</p>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <div className='contact-image-div'>
+                            <img src={phone} alt='Phone' className='contact-image'></img>
+                        </div>
+                        <p className='contact-info-heading-text'>Phone number</p> 
+                        <p className='contact-info-text'>Manager <span style={{color: '#0052FF'}}>+918065502317</span></p>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <div className='contact-image-div'>
+                            <img src={clock} alt='Clock' className='contact-image'></img>
+                        </div>
+                        <p className='contact-info-heading-text'>Working hours</p> 
+                        <p className='contact-info-text'>Mon - Sat 8:00am - 9:00pm</p>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+
+        <div className='footer'>
+            <Container>
+                <Row>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <p className='footer-name'>Mediclab</p>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4}>
+                        <p className='copyright'>2022 Mediclab</p>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4} className='socials-col'>
+                        <Row>
+                            <Col xs={3} sm={3} md={3} lg={3} className='socials-inner-col'>
+                                <img src={linkedin} alt='LinkedIn' className='socials-icon'></img>
+                            </Col>
+                            <Col xs={3} sm={3} md={3} lg={3} className='socials-inner-col'>
+                                <img src={youtube} alt='Youtube' className='socials-icon'></img>
+                            </Col>
+                            <Col xs={3} sm={3} md={3} lg={3} className='socials-inner-col'>
+                                <img src={facebook} alt='Facebook' className='socials-icon'></img>
+                            </Col>
+                            <Col xs={3} sm={3} md={3} lg={3} className='socials-inner-col'>
+                                <img src={instagram} alt='Instagram' className='socials-icon'></img>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>
