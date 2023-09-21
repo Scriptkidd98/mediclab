@@ -43,7 +43,7 @@ const Home: React.FC = () => {
         <div className='jumbotron'>
             <div className='grey-film'>
                 <Navbar expand='lg' className='navbar'>
-                    <Container fluid>
+                    <Container fluid style={{padding: '0px'}}>
                         <Navbar.Brand className='navbar-brand'>
                             <span>
                                 <span className='medic-span'>Medic</span><span className='lab-span'>lab</span>
