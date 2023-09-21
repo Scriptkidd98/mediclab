@@ -10,6 +10,7 @@
 
 # production
 /build
+/bootstraps
 
 # misc
 .DS_Store
